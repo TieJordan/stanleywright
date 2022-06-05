@@ -138,16 +138,16 @@
     </div>
   </section>
 
-    <section class="hero is-info">
-      <p style="color:#3e8ed0;">.</p>
-      <div id="mobile-menu" style="display: none;">
-        <p class="has-text-white has-text-centered"><b>Home</b></p>
-        <p class="has-text-white has-text-centered"><b>Meet Stanley</b></p>
-        <p class="has-text-white has-text-centered"><b>Issues</b></p>
-        <p class="has-text-white has-text-centered"><b>News</b></p>
-        <p class="has-text-white has-text-centered"><b>Volunteer</b></p>
-      </div>
-    </section>
+  <section class="hero is-info">
+    <p id="spacer" style="color:#3e8ed0;">.</p>
+    <div id="mobile-menu" style="display: none;">
+      <p class="has-text-centered"><a class="has-text-white" href="index.html"><b>Home</b></a></p>
+      <p class="has-text-centered"><a class="has-text-white" href="about.html"><b>Meet Stanley</b></a></p>
+      <p class="has-text-centered"><a class="has-text-white" href="issues.html"><b>Issues</b></a></p>
+      <p class="has-text-centered"><a class="has-text-white" href="news.html"><b>News</b></a></p>
+      <p class="has-text-centered"><a class="has-text-white" href="volunteer.html"><b>Volunteer</b></a></p>
+    </div>
+  </section>
     
     <section class="section pt-3 pb-3 gradient">
       <div class="container">
@@ -279,6 +279,7 @@
     // Get all "navbar-burger" elements
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
     const mobileMenu = document.getElementById('mobile-menu');
+    const spacer = document.getElementById('spacer');
 
       // Add a click event on each of them
       $navbarBurgers.forEach( el => {
@@ -287,8 +288,10 @@
           // Get the target from the "data-target" attribute
           if(mobileMenu.style.display == 'none'){
             mobileMenu.style.display = 'block';
+            spacer.style.display = 'none';
           } else {
             mobileMenu.style.display = 'none';
+            spacer.style.display = 'block';
           };
         });
       });
